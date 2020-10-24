@@ -12,7 +12,7 @@ int main (void){
     bool isOverflow = false;
 
     printf("Zadejte parametry kruznice #1:\n");
-    if (scanf(" %lf %lf %lf", &x1, &y1, &r1) == 0){
+    if (scanf(" %lf %lf %lf", &x1, &y1, &r1) <3){
         printf("Nespravny vstup.\n");
         return 1;
     }
@@ -22,7 +22,7 @@ int main (void){
     }
 
     printf("Zadejte parametry kruznice #2:\n");
-    if (scanf(" %lf %lf %lf", &x2, &y2, &r2) == 0){
+    if (scanf(" %lf %lf %lf", &x2, &y2, &r2) <3){
         printf("Nespravny vstup.\n");
         return 1;
 }
@@ -83,7 +83,8 @@ int main (void){
             return 0;
         }
         else if (r2>c+r1){
-            printf("Vnejsi dotyk, zadny prekryv.\n");
+            overflow = area1;
+            printf("Kruznice #1 lezi uvnitr kruznice #1, prekryv: %.6lf\n", overflow);
             return 0;
         }
         //prekryv
