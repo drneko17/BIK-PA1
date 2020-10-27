@@ -1,5 +1,5 @@
 #include <stdio.h>
-//text
+//monka
 int main (void){
     int a = 34;
 
