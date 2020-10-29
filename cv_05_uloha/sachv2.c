@@ -7,11 +7,11 @@ int main (void){
     
 
     int number, size;
-    char *cernePocet = (char*) malloc(size);
-    char *bilePocet = (char*) malloc(size);
-    char *oddLine = (char*) malloc((number*size)+2);
-    char *evenLine = (char*) malloc((number*size)+2);
-    char *startEndLine = (char*) malloc((number*size)+2);
+    char *cernePocet;
+    char *bilePocet;
+    char *oddLine;
+    char *evenLine;
+    char *startEndLine;
 
 
 
