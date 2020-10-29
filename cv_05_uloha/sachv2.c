@@ -16,12 +16,12 @@ int main (void){
 
 
     printf("Zadejte pocet poli:\n");
-    if(scanf("%d", &number) != 1 || number < 0){
+    if(scanf("%d", &number) != 1 || number <= 0){
         printf("Nespravny vstup.\n");
         return 1;
     };
     printf("Zadejte velikost pole:\n");
-    if(scanf("%d", &size) != 1 || number < 0){
+    if(scanf("%d", &size) != 1 || size <= 0){
         printf("Nespravny vstup.\n");
         return 1;
     };
