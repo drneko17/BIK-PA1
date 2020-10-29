@@ -1,16 +1,19 @@
 #include <stdio.h>
 #include <string.h>
+#include <cstdlib>
 
 
 int main (void){
     
 
     int number, size;
-    char cernePocet[50] = "";
-    char bilePocet[50] = "";
-    char oddLine[50] = "";
-    char evenLine[50] = "";
-    char startEndLine[50] = "";
+    char *cernePocet = (char*) malloc(size);
+    char *bilePocet = (char*) malloc(size);
+    char *oddLine = (char*) malloc((number*size)+2);
+    char *evenLine = (char*) malloc((number*size)+2);
+    char *startEndLine = (char*) malloc((number*size)+2);
+
+
 
     printf("Zadejte pocet poli:\n");
     if(scanf("%d", &number) != 1 || number < 0){
@@ -22,6 +25,12 @@ int main (void){
         printf("Nespravny vstup.\n");
         return 1;
     };
+
+    cernePocet = (char*) malloc(size);
+    bilePocet = (char*) malloc(size);
+    oddLine = (char*) malloc((number*size)+2);
+    evenLine = (char*) malloc((number*size)+2);
+    startEndLine = (char*) malloc((number*size)+2);
 
     strcat(startEndLine, "+");
     for (int i = 0; i < (number*size); i++){
