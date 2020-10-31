@@ -1,4 +1,4 @@
-FILE=uloha12
+FILE=uloha1
 TEST_DATA=./samples1
 
 for X in {0000..0100} ; do
