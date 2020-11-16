@@ -3,7 +3,12 @@
 #include <assert.h>
 #endif /* __PROGTEST__ */
 
-int countLeapYears (int a, int b){
+
+int cuckooClock ( int y1, int m1, int d1, int h1, int i1,
+                  int y2, int m2, int d2, int h2, int i2, long long int * cuckoo )
+{
+
+    int countLeapYears (int a, int b){
     int diff = b-a;
     int count = 0;
     for (int i = 0; i <= diff ; i++){
@@ -37,9 +42,6 @@ int countBigMonths (int y1, int m1, int y2, int m2){
     return count;
 }
 
-int cuckooClock ( int y1, int m1, int d1, int h1, int i1,
-                  int y2, int m2, int d2, int h2, int i2, long long int * cuckoo )
-{
                   if (d1 > 31 || d2 > 31){
                     return 0;
                   }
@@ -157,8 +159,8 @@ int main ( int argc, char * argv [] )
 {
   long long int cuckoo;
 
-  assert ( cuckooClock ( 2020, 10,  1, 13, 15,
-                         2020, 10,  1, 18, 45, &cuckoo ) == 1 && cuckoo == 26 );
+  assert ( cuckooClock ( 2013, 10,  1, 13, 15,
+                         2013, 10,  1, 18, 45, &cuckoo ) == 1 && cuckoo == 26 );
   assert ( cuckooClock ( 2013, 10,  1, 13, 15,
                          2013, 10,  2, 11, 20, &cuckoo ) == 1 && cuckoo == 165 );
   assert ( cuckooClock ( 2013,  1,  1, 13, 15,
